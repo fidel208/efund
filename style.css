@@ -1,0 +1,157 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    height: 100px;
+    background: linear-gradient(90deg, #2b2e6f, #1c1f4a);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 700;
+    height: 30px;
+    margin-left: 50px;
+    color: white;
+    cursor: pointer;
+}
+nav {
+    margin-right: 100px;
+}
+nav > a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: 600;
+}
+nav > a:hover {
+    color: red;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+}
+.intro {
+    display: flex;
+}
+.intro > img {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 3s ease forwards;
+}
+@keyframes fadeSlide {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+.words {
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.type > h1 {
+    font-size: 50px;
+    margin: 0px;
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+.type > p {
+    margin-left: 150px;
+    font-size: 20px;
+    font-style: italic;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    animation-delay: 4s;
+}
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+.explain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 5s ease forwards;
+    animation-delay: 5s;
+}
+@keyframes fadeSlide {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+.explain > h2 {
+    font-size: 60px;
+    margin: 0px;
+}
+.p1 {
+    margin: 0px;
+    font-size: 27px;
+}
+.p2 {
+    margin: 0px;
+    font-size: 27px;
+}
+.p3 {
+    margin: 0px;
+    font-size: 27px;
+}
+button {
+    height: 80px;
+    width: 250px;
+    margin-top: 30px;
+    font-size: 30px;
+    background: linear-gradient(90deg, #6e56cf, #3b4bd1);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 100px;
+}
+button > a {
+    color: white;
+    text-decoration: none;
+}
+button > a:hover {
+    color: rgb(181, 107, 241);
+}
+footer {
+    background-color: #111;
+    color: #aaa;
+    height: 150px;
+    text-align: center;
+    border-top: 2px solid #2e3a8c;
+    font-size: 30px;
+    position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
