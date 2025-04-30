@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IMG_20250422_135839.png" type="image/x-icon">
+    <title>login/signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="fullPage" class="rcPage active">
+        <div class="container">
+            <h1>WELCOME</h1>
+            <p>Choose one</p>
+            <div class="choose">
+                <button id="loginTab" class="active" onclick="showForm('login')">Login</button>
+                <button id="registerTab" onclick="showForm('register')">Sign up</button>
+            </div>
+        </div>
+        <div class="login-form active" id="loginForm">
+            <form action="http://127.0.0.1:5500/EFUND/profile.html" method="get">
+                <h1>Login</h1>
+                <input type="email" placeholder="Email address" required>
+                <input type="password" placeholder="Password" id="loginPass" minlength="8" required>
+                <input type="checkbox"  onclick="showLoginPassword()" class="confirm">
+                <label for="checkbox">Show password</label> <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="signup-form" id="registerForm">
+            <form action="http://127.0.0.1:5500/EFUND/verify.html">
+                <h1>Create an account</h1>
+                <input type="email" placeholder="Email address" required>
+                <input type="name" placeholder="Full name" required>
+                <input type="" placeholder="Phone number" accept="number" maxlength="10" required>
+                <input type="password" placeholder="Password" id="createPass" minlength="8" required>
+                <input type="password" placeholder="Confirm password" id="createPass" minlength="8" required>
+                <input type="checkbox" onclick="showCreatePassword()" class="confirm">
+                <label for="checkbox">Show password</label> <br>
+                <button id="createButton" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
